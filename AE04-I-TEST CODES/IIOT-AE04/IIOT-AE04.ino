@@ -1,4 +1,3 @@
-
 /*
  * IIOT_AE04_FINAL TEST
  * 
@@ -114,7 +113,6 @@ void loop() {
   Serial.print(digitalRead(INPUT6));
   Serial.println(""); 
 
-  Serial.println("-----------------------------------------------------------");  
   Serial.println(""); 
   Serial.print("Push button  ");
   Serial.println(readSwitch());
@@ -136,6 +134,7 @@ void loop() {
   adc2 = ads2.readADC_SingleEnded(2);
   adc3 = ads2.readADC_SingleEnded(3);
 
+  Serial.println("-----------------------------------------------------------");
   Serial.print("AIN5: "); Serial.print(adc0); Serial.println("  ");
   Serial.print("AIN6: "); Serial.print(adc1); Serial.println("  ");
   
@@ -149,6 +148,7 @@ void loop() {
   digitalWrite(OUTPUT2, LOW);
   delay(500);
 
+  Serial.println("-----------------------------------------------------------");  
   digitalWrite (RS485_FC, HIGH);                    // Make FLOW CONTROL pin HIGH
   delay(500);
   Serial1.println(F("RS485 01 SUCCESS"));    // Send RS485 SUCCESS serially
